@@ -17,7 +17,7 @@ use BlackCat\Database\Support\DtoHydrator;
 final class TenantDomainDtoMapper
 {
     /** @var array<string,string> Column -> DTO property */
-    private const COL_TO_PROP = [ 'tenant_id' => 'tenantId', 'domain_ci' => 'domainCi', 'is_primary' => 'isPrimary', 'created_at' => 'createdAt' ];
+    private const COL_TO_PROP = [ 'id' => 'id', 'tenant_id' => 'tenantId', 'domain' => 'domain', 'domain_ci' => 'domainCi', 'is_primary' => 'isPrimary', 'created_at' => 'createdAt' ];
 
     /** @var string[] */
     private const BOOL_COLS   = [ 'is_primary' ];
