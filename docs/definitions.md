@@ -5,11 +5,11 @@ Tenant-owned domains used for routing/custom branding.
 ## Columns
 | Column | Type | Null | Default | Description |
 | --- | --- | --- | --- | --- |
-| created_at | TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Creation timestamp (UTC). |
+| created_at | DATETIME(6) | NO | CURRENT_TIMESTAMP(6) | Creation timestamp (UTC). |
 | domain | VARCHAR(255) | NO |  | Original domain string. |
-| domain_ci | TEXT | YES |  | Lowercase domain used for uniqueness. |
+| domain_ci | VARCHAR(255) | YES |  | Lowercase domain used for uniqueness. |
 | id | BIGINT | NO |  | Surrogate primary key. |
-| is_primary | BOOLEAN | NO | FALSE | Whether this domain is the tenant primary. |
+| is_primary | BOOLEAN | NO | 0 | Whether this domain is the tenant primary. |
 | tenant_id | BIGINT | NO |  | Owning tenant (FK tenants.id). |
 
 ## Engine Details
@@ -55,5 +55,5 @@ Foreign keys:
 ## Views
 | View | Engine | Flags | File |
 | --- | --- | --- | --- |
-| vw_tenant_domains | mysql | algorithm=MERGE, security=INVOKER | [packages\tenant-domains\schema\040_views.mysql.sql](https://github.com/blackcatacademy/blackcat-database/packages/tenant-domains/schema/040_views.mysql.sql) |
-| vw_tenant_domains | postgres |  | [packages\tenant-domains\schema\040_views.postgres.sql](https://github.com/blackcatacademy/blackcat-database/packages/tenant-domains/schema/040_views.postgres.sql) |
+| vw_tenant_domains | mysql | algorithm=MERGE, security=INVOKER | [schema\040_views.mysql.sql](schema\040_views.mysql.sql) |
+| vw_tenant_domains | postgres |  | [schema\040_views.postgres.sql](schema\040_views.postgres.sql) |
