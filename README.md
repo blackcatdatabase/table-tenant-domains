@@ -97,7 +97,7 @@ _No engine differences detected._
 
 ## Constraints Snapshot
 - `created_at` – default=CURRENT_TIMESTAMP(6)
-- `is_primary` – default=0
+- `is_primary` – default=FALSE
 
 ## Schema Files
 | File | Engine |
