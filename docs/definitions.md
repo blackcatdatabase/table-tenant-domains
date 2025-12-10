@@ -9,7 +9,7 @@ Tenant-owned domains used for routing/custom branding.
 | domain | VARCHAR(255) | NO |  | Original domain string. |
 | domain_ci | mysql: VARCHAR(255) / postgres: TEXT | YES |  | Lowercase domain used for uniqueness. |
 | id | BIGINT | NO |  | Surrogate primary key. |
-| is_primary | BOOLEAN | NO | FALSE | Whether this domain is the tenant primary. |
+| is_primary | BOOLEAN | NO | mysql: 0 / postgres: FALSE | Whether this domain is the tenant primary. |
 | tenant_id | BIGINT | NO |  | Owning tenant (FK tenants.id). |
 
 ## Engine Details
@@ -55,5 +55,5 @@ Foreign keys:
 ## Views
 | View | Engine | Flags | File |
 | --- | --- | --- | --- |
-| vw_tenant_domains | mysql | algorithm=MERGE, security=INVOKER | [schema\040_views.mysql.sql](schema\040_views.mysql.sql) |
-| vw_tenant_domains | postgres |  | [schema\040_views.postgres.sql](schema\040_views.postgres.sql) |
+| vw_tenant_domains | mysql | algorithm=MERGE, security=INVOKER | [../schema/040_views.mysql.sql](../schema/040_views.mysql.sql) |
+| vw_tenant_domains | postgres |  | [../schema/040_views.postgres.sql](../schema/040_views.postgres.sql) |
