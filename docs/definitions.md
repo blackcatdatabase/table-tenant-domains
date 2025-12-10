@@ -5,12 +5,12 @@ Tenant-owned domains used for routing/custom branding.
 ## Columns
 | Column | Type | Null | Default | Description |
 | --- | --- | --- | --- | --- |
-| created_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Creation timestamp (UTC). |
+| id | BIGINT | NO |  | Surrogate primary key. |
+| tenant_id | BIGINT | NO |  | Owning tenant (FK tenants.id). |
 | domain | VARCHAR(255) | NO |  | Original domain string. |
 | domain_ci | mysql: VARCHAR(255) / postgres: TEXT | YES |  | Lowercase domain used for uniqueness. |
-| id | BIGINT | NO |  | Surrogate primary key. |
 | is_primary | BOOLEAN | NO | mysql: 0 / postgres: FALSE | Whether this domain is the tenant primary. |
-| tenant_id | BIGINT | NO |  | Owning tenant (FK tenants.id). |
+| created_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Creation timestamp (UTC). |
 
 ## Engine Details
 
