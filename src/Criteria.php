@@ -41,11 +41,11 @@ final class Criteria extends BaseCriteria
         return [ 'domain', 'domain_ci' ];
     }
 
-/** Columns allowed in ORDER BY (falls back to filterable() when empty). */
-protected function sortable(): array
-{
-    return [ 'id', 'tenant_id', 'domain', 'domain_ci', 'is_primary', 'created_at' ];
-}
+    /** Columns allowed in ORDER BY (falls back to filterable() when empty). */
+    protected function sortable(): array
+    {
+        return [ 'id', 'tenant_id', 'domain', 'domain_ci', 'is_primary', 'created_at' ];
+    }
 
     /**
      * Whitelist of joinable entities (for safe ->join() usage):
