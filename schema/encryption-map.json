@@ -1,0 +1,26 @@
+{
+  "tables": {
+    "tenant_domains": {
+      "columns": {
+        "created_at": {
+          "strategy": "passthrough"
+        },
+        "domain": {
+          "strategy": "passthrough"
+        },
+        "domain_ci": {
+          "strategy": "passthrough"
+        },
+        "id": {
+          "strategy": "passthrough"
+        },
+        "is_primary": {
+          "strategy": "passthrough"
+        },
+        "tenant_id": {
+          "strategy": "passthrough"
+        }
+      }
+    }
+  }
+}
